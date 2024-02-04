@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ScheduleCollectionViewItem" customModule="UHFScheduler" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="f8e-fK-1rn" id="ENw-Xd-hrq"/>
+                <outlet property="dateTextField" destination="aLg-xF-ecU" id="32S-t4-Z5w"/>
+                <outlet property="dayTextField" destination="Mmh-dA-O03" id="kZc-lR-igi"/>
+                <outlet property="sourceItemView" destination="Hz6-mo-xeY" id="pxZ-oi-W1m"/>
+                <outlet property="textField" destination="aLg-xF-ecU" id="Na2-TS-kmF"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView identifier="com.UHFScheduler.scheduleCell" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aLg-xF-ecU">
+                    <rect key="frame" x="2" y="834" width="476" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="rJe-Ht-XLt"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Date" drawsBackground="YES" id="cdd-dp-nc3">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mmh-dA-O03">
+                    <rect key="frame" x="2" y="816" width="476" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="WD2-9b-AiG"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Day" drawsBackground="YES" id="NrN-nf-JDX">
+                        <font key="font" usesAppearanceFont="YES"/>
+                        <color key="textColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="f8e-fK-1rn" customClass="CalendarDayView" customModule="UHFScheduler" customModuleProvider="target">
+                    <rect key="frame" x="2" y="0.0" width="476" height="816"/>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="aLg-xF-ecU" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="2xu-ux-adq"/>
+                <constraint firstItem="Mmh-dA-O03" firstAttribute="trailing" secondItem="aLg-xF-ecU" secondAttribute="trailing" id="CWv-PO-jyM"/>
+                <constraint firstItem="f8e-fK-1rn" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="H1k-yG-44a"/>
+                <constraint firstItem="Mmh-dA-O03" firstAttribute="top" secondItem="aLg-xF-ecU" secondAttribute="bottom" id="Te4-M7-cbZ"/>
+                <constraint firstItem="f8e-fK-1rn" firstAttribute="top" secondItem="Mmh-dA-O03" secondAttribute="bottom" id="Vj7-jZ-OGG"/>
+                <constraint firstAttribute="trailing" secondItem="aLg-xF-ecU" secondAttribute="trailing" constant="2" id="W16-pA-0hb"/>
+                <constraint firstAttribute="trailing" secondItem="f8e-fK-1rn" secondAttribute="trailing" constant="2" id="XIz-L7-Ig9"/>
+                <constraint firstItem="aLg-xF-ecU" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="2" id="Z3G-6i-GGe"/>
+                <constraint firstAttribute="bottom" secondItem="f8e-fK-1rn" secondAttribute="bottom" id="rHC-fX-MxT"/>
+                <constraint firstItem="Mmh-dA-O03" firstAttribute="leading" secondItem="aLg-xF-ecU" secondAttribute="leading" id="s1o-dY-qeO"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="114"/>
+        </customView>
+        <collectionViewItem id="EOf-bN-9K5" customClass="ScheduleCollectionViewItem" customModule="UHFScheduler" customModuleProvider="target">
+            <connections>
+                <outlet property="textField" destination="aLg-xF-ecU" id="f7l-Mm-fOb"/>
+            </connections>
+        </collectionViewItem>
+    </objects>
+</document>
